@@ -811,7 +811,7 @@ async function init() {
     } else {
         console.log(chalk.yellow("🔍 No existing session file, checking config.SESSION_ID..."));
         
-        if (config.SESSION_ID && config.SESSION_ID.startsWith("Buddy~")) {
+        if (config.SESSION_ID && config.SESSION_ID.startsWith("TimnasaTech~")) {
             console.log(chalk.blue("📥 Attempting to load Gifted session (GZIP compressed)..."));
             const sessionLoaded = await loadGiftedSession();
             
@@ -823,7 +823,7 @@ async function init() {
                 useQR = true;
                 await start();
             }
-        } else if (config.SESSION_ID && config.SESSION_ID.includes("Buddy~")) {
+        } else if (config.SESSION_ID && config.SESSION_ID.includes("TimnasaTech~")) {
             console.log(chalk.blue("📥 Attempting to load legacy Mega.nz session..."));
             const sessionDownloaded = await downloadLegacySession();
             
