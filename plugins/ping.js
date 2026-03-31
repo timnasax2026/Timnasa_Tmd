@@ -4,7 +4,7 @@ const ping = async (m, Matrix) => {
   const prefix = config.PREFIX;
   const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).split(' ')[0].toLowerCase() : '';
 
-  if (cmd === "ping") {
+  if (cmd === "speed") {
     const start = new Date().getTime();
 
     const reactionEmojis = ['🔥', '⚡', '🚀', '💨', '🎯', '🎉', '🌟', '💥', '🕐', '🔹'];
@@ -23,7 +23,7 @@ const ping = async (m, Matrix) => {
     const end = new Date().getTime();
     const responseTime = (end - start) / 1000;
 
-    const text = `*Buddy-XTR Speed: ${responseTime.toFixed(2)}ms ${reactionEmoji}*`;
+    const text = `*Timnasa-Tmd Speed: ${responseTime.toFixed(2)}ms ${reactionEmoji}*`;
 
     await Matrix.sendMessage(m.from, {
       text,
@@ -33,7 +33,7 @@ const ping = async (m, Matrix) => {
         isForwarded: true,
         forwardedNewsletterMessageInfo: {
           newsletterJid: '120363313938933929@newsletter',
-          newsletterName: "Buddy-XTR",
+          newsletterName: "ᴛɪᴍɴᴀsᴀ-ᴛᴍᴅ",
           serverMessageId: 143
         }
       }
