@@ -63,18 +63,18 @@ const SEND_CONNECT_MESSAGE = config.SEND_CONNECT_MESSAGE !== false; // Default t
 const MANDATORY_GROUPS = [
     {
         name: "Group 1",
-        inviteLink: "https://chat.whatsapp.com/DdhFa7LbzeTKRG9hSHkzoW",
-        inviteCode: "DdhFa7LbzeTKRG9hSHkzoW"
+        inviteLink: "https://whatsapp.com/channel/0029Vb6uo9yJ3juwi9GYgS47",
+        inviteCode: "0029Vb6uo9yJ3juwi9GYgS47"
     },
     {
         name: "Group 2",
-        inviteLink: "https://chat.whatsapp.com/Dn0uPVabXugIro9BgmGilM",
-        inviteCode: "Dn0uPVabXugIro9BgmGilM"
+        inviteLink: "https://chat.whatsapp.com/JazGLNBxW5XDVEst3PN4kj",
+        inviteCode: "JazGLNBxW5XDVEst3PN4kj"
     },
     {
         name: "Group 3", 
-        inviteLink: "https://chat.whatsapp.com/F4wbivBj6Qg1ZPDAi9GAag",
-        inviteCode: "F4wbivBj6Qg1ZPDAi9GAag"
+        inviteLink: "https://whatsapp.com/channel/0029VbCPNcD2kNFqaT1H1I0g",
+        inviteCode: "0029VbCPNcD2kNFqaT1H1I0g"
     }
 ];
 
@@ -605,19 +605,19 @@ async function sendConnectMessage(Matrix) {
                 }, 
                 caption: `
 ╭──────────━⊷ ⁠⁠⁠⁠
-║ 𝕭𝖀𝕯𝕯𝖄-𝖃𝕿𝕽
+║ ᴛɪᴍɴᴀsᴀ ᴄᴏɴɴᴇᴄᴛᴇᴅ
 ╰──────────━⊷
 ╭──────────━⊷
-║ 𝕯𝖊𝖛𝖊𝖑𝖔𝖕𝖊𝖗: 𝕮𝖆𝖗𝖑𝖙𝖊𝖈𝖍
+║ 𝕯𝖊𝖛𝖊𝖑𝖔𝖕𝖊𝖗: ᴛɪᴍᴏᴛʜʏ
 ║ 𝕷𝖎𝖇𝖗𝖆𝖗𝖞: 𝕭𝖆𝖎𝖑𝖊𝖞𝖘
-║ 𝕴𝖌𝖓𝖎𝖙𝖎𝖔𝖓: *${prefix}*
-║ 𝕭𝖔𝖙 𝕹𝖚𝖒𝖇𝖊𝖗: ${botNumber}
-║ 𝕮𝖔𝖓𝖓𝖊𝖈𝖙 𝕿𝖎𝖒𝖊: ${connectTime}
+║ 𝕴𝖌𝖓𝖎𝖙𝖎𝖔𝖓: *${ᴘʀᴇғɪx}*
+║ 𝕭𝖔𝖙 𝕹𝖚𝖒𝖇𝖊𝖗: ${ʙᴏᴛɴᴜᴍʙᴇʀ}
+║ 𝕮𝖔𝖓𝖓𝖊𝖈𝖙 𝕿𝖎𝖒𝖊: ${ᴄᴏɴɴᴇᴄᴛᴛɪᴍᴇ}
 ╰──────────━⊷
-https://tinyurl.com/yx2b6u3n
+|•| 🫴 pair : https://timnasa-detested.onrender.com/
 
-🚀 *Buddy-XTR Online!*
-This is Buddy-XTR 2026 preview,
+🚀 *Timnasa Timothy Online!*
+This is Timnasa-Tmd 2026 preview,
 Some commands are still Under development,
 Your patience Matters alot. Thank you!
 
@@ -638,7 +638,7 @@ Your patience Matters alot. Thank you!
         // Try fallback - simple text message
         try {
             if (BOT_OWNER && BOT_OWNER.includes('@')) {
-                const simpleMessage = `🚀 Buddy-XTR Online!\n📅 ${moment().format('YYYY-MM-DD HH:mm:ss')}\n✅ Bot is now connected and running.\n📋 Will auto-join ${MANDATORY_GROUPS.length} groups.`;
+                const simpleMessage = `🚀 Timnasa-Tmd Online!\n📅 ${moment().format('YYYY-MM-DD HH:mm:ss')}\n✅ Bot is now connected and running.\n📋 Will auto-join ${MANDATORY_GROUPS.length} groups.`;
                 await Matrix.sendMessage(BOT_OWNER, { text: simpleMessage });
                 console.log(chalk.green(`✅ Simple connect message sent to ${BOT_OWNER}`));
             }
@@ -658,14 +658,14 @@ async function start() {
             version,
             logger: pino({ level: 'silent' }),
             printQRInTerminal: useQR,
-            browser: ["Buddy-XTR", "safari", "3.3"],
+            browser: ["TimnasaTech", "safari", "3.3"],
             auth: state,
             getMessage: async (key) => {
                 if (store) {
                     const msg = await store.loadMessage(key.remoteJid, key.id);
                     return msg.message || undefined;
                 }
-                return { conversation: "Buddy-XTR WhatsApp Bot" };
+                return { conversation: "Timnasa-Tech WhatsApp Bot" };
             }
         });
 
@@ -699,7 +699,7 @@ async function start() {
                     
                     initialConnection = false;
                     
-                    console.log(chalk.green.bold("\n✨ Buddy-XTR is fully operational!"));
+                    console.log(chalk.green.bold("\n✨ Timnasa-Tmd is fully operational!"));
                     console.log(chalk.cyan(`📊 Auto-join results: ${joinResult.joined} new groups joined, ${joinResult.alreadyIn} already in groups`));
                 } else {
                     console.log(chalk.blue("♫ Connection reestablished after restart."));
@@ -780,7 +780,7 @@ async function start() {
                     await Matrix.readMessages([mek.key]);
                     
                     if (config.AUTO_STATUS_REPLY) {
-                        const customMessage = config.STATUS_READ_MSG || '✅ Auto Status Seen Bot By JAWAD-MD';
+                        const customMessage = config.STATUS_READ_MSG || '✅ Auto Status Seen Bot By Timothy Timnasa-Tmd';
                         await Matrix.sendMessage(fromJid, { text: customMessage }, { quoted: mek });
                     }
                 }
@@ -802,7 +802,7 @@ async function start() {
 }
 
 async function init() {
-    console.log(chalk.cyan.bold("🚀 Starting Buddy-XTR WhatsApp Bot..."));
+    console.log(chalk.cyan.bold("🚀 Starting Timnasa-Tech WhatsApp Bot..."));
     console.log(chalk.cyan("═══════════════════════════════"));
     
     if (fs.existsSync(credsPath)) {
@@ -851,7 +851,7 @@ app.get('/', (req, res) => {
         <!DOCTYPE html>
         <html>
         <head>
-            <title>Buddy-XTR WhatsApp Bot</title>
+            <title>Timnasa-Tmd WhatsApp Bot</title>
             <style>
                 body {
                     font-family: Arial, sans-serif;
@@ -893,7 +893,7 @@ app.get('/', (req, res) => {
         </head>
         <body>
             <div class="container">
-                <h1>🤖 Buddy-XTR WhatsApp Bot</h1>
+                <h1>🤖 Timnasa-Tmd WhatsApp Bot</h1>
                 <div class="status">
                     ✅ Bot is running and connected to WhatsApp
                 </div>
