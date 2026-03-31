@@ -6,7 +6,7 @@ const repo = async (m, gss) => {
   const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).split(" ")[0].toLowerCase() : "";
 
   if (["repo", "sc", "script", "info"].includes(cmd)) {
-    const githubRepoURL = "https://github.com/carl24tech/Buddy-XTR";
+    const githubRepoURL = "https://github.com/timnasax/Timnasa_Tmd9";
 
     try {
       // Extract username and repo name from the URL
@@ -23,7 +23,7 @@ const repo = async (m, gss) => {
         `https://api.github.com/repos/${username}/${repoName}`,
         {
           headers: {
-            'User-Agent': 'Buddy-XTR', // GitHub API requires a user-agent
+            'User-Agent': 'Timnasa-Tmd', // GitHub API requires a user-agent
             'Accept': 'application/vnd.github.v3+json'
           },
           timeout: 10000 // 10 second timeout
@@ -44,7 +44,7 @@ const repo = async (m, gss) => {
         m.from,
         {
           image: { 
-            url: "https://files.catbox.moe/qi19ii.jpg" 
+            url: "https://files.catbox.moe/q3kghf.jpeg" 
           },
           caption: formattedInfo,
           contextInfo: {
