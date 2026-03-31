@@ -4,7 +4,7 @@ const ping = async (m, Matrix) => {
   const prefix = config.PREFIX;
   const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).split(' ')[0].toLowerCase() : '';
 
-  if (cmd === "speed") {
+  if (cmd === "ping") {
     const start = new Date().getTime();
 
     const reactionEmojis = ['🔥', '⚡', '🚀', '💨', '🎯', '🎉', '🌟', '💥', '🕐', '🔹'];
@@ -32,7 +32,7 @@ const ping = async (m, Matrix) => {
         forwardingScore: 999,
         isForwarded: true,
         forwardedNewsletterMessageInfo: {
-          newsletterJid: '120363313938933929@newsletter',
+          newsletterJid: '120363313938933924@newsletter',
           newsletterName: "ᴛɪᴍɴᴀsᴀ-ᴛᴍᴅ",
           serverMessageId: 143
         }
