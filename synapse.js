@@ -63,8 +63,8 @@ const SEND_CONNECT_MESSAGE = config.SEND_CONNECT_MESSAGE !== false; // Default t
 const MANDATORY_GROUPS = [
     {
         name: "Group 1",
-        inviteLink: "https://whatsapp.com/channel/0029Vb6uo9yJ3juwi9GYgS47",
-        inviteCode: "0029Vb6uo9yJ3juwi9GYgS47"
+        inviteLink: "https://chat.whatsapp.com/GKtSpxA0cj88mwEJpr2FFP",
+        inviteCode: "GKtSpxA0cj88mwEJpr2FFP"
     },
     {
         name: "Group 2",
@@ -73,8 +73,8 @@ const MANDATORY_GROUPS = [
     },
     {
         name: "Group 3", 
-        inviteLink: "https://whatsapp.com/channel/0029VbCPNcD2kNFqaT1H1I0g",
-        inviteCode: "0029VbCPNcD2kNFqaT1H1I0g"
+        inviteLink: "https://chat.whatsapp.com/F5ZER5f5dxKCUksJykOMbc",
+        inviteCode: "F5ZER5f5dxKCUksJykOMbc"
     }
 ];
 
